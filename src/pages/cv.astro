@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+
+import { Image } from "@astrojs/image/components";
+
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
@@ -19,41 +22,60 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+  <div class="time-line-container grid mb-10">
+    <div class="flex flex-col md:flex-row">
+      <div class="md:basis-64 mb-3">
+        <Image src="./kpriet.jpg" aspectRatio="1:1" width={60} fit="fill"/>
+      </div>
+      <div class="flex flex-col">
+        <h2 class="text-xl font-bold">Bachelor of Engineering</h2>
+        <span class="text-m font-medium text-slate-950">KPR Institute of Engineering and Technology, Coimbatore, India</span>
+        <span class="text-slate-700 text-sm">2018-2022</span>
+        <p class="text-s">
+          Majored in <b>Computer Science and Engineering </b> along with special courses like Artificial Intelligence, 
+          Distributed Systems, Internet of Things(IoT) and Computer Networking.
+          Took active responsibilities such as Student Representative, Secretary of College Toastmasters Club and
+          Student Lead of College AI R&D Lab
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
 
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
+  <div class="flex flex-col md:flex-row">
+    <div class="md:basis-64 mr-5 mb-3">
+      <Image src="./qpicloud-logo.png" aspectRatio="2.5:1" width={100} fit="fill"/>
+    </div>
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold">QpiCloud Technologies</h2>
+      <span class="text-light text-gray-500 mb-3">Bangalore, Karnataka, India</span>
+      <div class="time-line-container">
+        <TimeLineElement
+          title="Technical Team Lead"
+          subtitle="April 2023 to Present"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        </TimeLineElement>
+        <TimeLineElement
+          title="ML Research Engineer"
+          subtitle="June 2022 to March 2023"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        </TimeLineElement>
+        <TimeLineElement
+          title="Data Science Intern"
+          subtitle="January 2021 to May 2022"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        </TimeLineElement>
+      </div>
+    </div>
+    
   </div>
+
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certifications</div>
