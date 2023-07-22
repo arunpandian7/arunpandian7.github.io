@@ -25,7 +25,7 @@ import { Image } from "@astrojs/image/components";
   <div class="time-line-container grid mb-10">
     <div class="flex flex-col md:flex-row">
       <div class="md:basis-64 mb-3">
-        <Image src="./kpriet.jpg" aspectRatio="1:1" width={60} fit="fill"/>
+        <Image src="./kpriet.jpg" aspectRatio="1:1" width={64} fit="fill" format="webp"/>
       </div>
       <div class="flex flex-col">
         <h2 class="text-xl font-bold">Bachelor of Engineering</h2>
@@ -47,11 +47,11 @@ import { Image } from "@astrojs/image/components";
 
   <div class="flex flex-col md:flex-row">
     <div class="md:basis-64 mr-5 mb-3">
-      <Image src="./qpicloud-logo.png" aspectRatio="2.5:1" width={100} fit="fill"/>
+      <Image src="./qpicloud-logo.png" aspectRatio="4.9:3" width={64} fit="fill" quality="80"/>
     </div>
     <div class="flex flex-col">
       <h2 class="text-xl font-bold">QpiCloud Technologies</h2>
-      <span class="text-light text-gray-500 mb-3">Bangalore, Karnataka, India</span>
+      <span class="text-light text-lm text-gray-500 mb-3">Bangalore, Karnataka, India</span>
       <div class="time-line-container">
         <TimeLineElement
           title="Technical Team Lead"
