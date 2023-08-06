@@ -1,0 +1,60 @@
+{
+    "articles": [
+        {
+            "title": "Surface crack detection using deep learning with shallow CNN architecture for enhanced computation",
+            "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iycQQMEAAAAJ&citation_for_view=iycQQMEAAAAJ:u-x6o8ySG0sC",
+            "citation_id": "iycQQMEAAAAJ:u-x6o8ySG0sC",
+            "authors": "B Kim, N Yuvaraj, KR Sri Preethaa, R Arun Pandian",
+            "publication": "Neural Computing and Applications 33, 9289-9305, 2021",
+            "cited_by": {
+                "value": 84,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5440129159726301368",
+                "serpapi_link": "https://serpapi.com/search.json?cites=5440129159726301368&engine=google_scholar&hl=en",
+                "cites_id": "5440129159726301368"
+            },
+            "year": "2021"
+        },
+        {
+            "title": "Investigation of steel frame damage based on computer vision and deep learning",
+            "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iycQQMEAAAAJ&citation_for_view=iycQQMEAAAAJ:d1gkVwhDpl0C",
+            "citation_id": "iycQQMEAAAAJ:d1gkVwhDpl0C",
+            "authors": "B Kim, N Yuvaraj, HW Park, KRS Preethaa, RA Pandian, DE Lee",
+            "publication": "Automation in Construction 132, 103941, 2021",
+            "cited_by": {
+                "value": 26,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2883457329965981855",
+                "serpapi_link": "https://serpapi.com/search.json?cites=2883457329965981855&engine=google_scholar&hl=en",
+                "cites_id": "2883457329965981855"
+            },
+            "year": "2021"
+        },
+        {
+            "title": "Ensemble machine learning-based approach for predicting of FRP–concrete interfacial bonding",
+            "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iycQQMEAAAAJ&citation_for_view=iycQQMEAAAAJ:9yKSN-GCB0IC",
+            "citation_id": "iycQQMEAAAAJ:9yKSN-GCB0IC",
+            "authors": "B Kim, DE Lee, G Hu, Y Natarajan, S Preethaa, AP Rathinakumar",
+            "publication": "Mathematics 10 (2), 231, 2022",
+            "cited_by": {
+                "value": 16,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17955004240545382966",
+                "serpapi_link": "https://serpapi.com/search.json?cites=17955004240545382966&engine=google_scholar&hl=en",
+                "cites_id": "17955004240545382966"
+            },
+            "year": "2022"
+        },
+        {
+            "title": "A Stacked Generalization Model to Enhance Prediction of Earthquake-Induced Soil Liquefaction",
+            "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=iycQQMEAAAAJ&citation_for_view=iycQQMEAAAAJ:2osOgNQ5qMEC",
+            "citation_id": "iycQQMEAAAAJ:2osOgNQ5qMEC",
+            "authors": "S Preethaa, Y Natarajan, AP Rathinakumar, DE Lee, Y Choi, YJ Park, ...",
+            "publication": "Sensors 22 (19), 7292, 2022",
+            "cited_by": {
+                "value": 2,
+                "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16498128668125793712",
+                "serpapi_link": "https://serpapi.com/search.json?cites=16498128668125793712&engine=google_scholar&hl=en",
+                "cites_id": "16498128668125793712"
+            },
+            "year": "2022"
+        }
+    ]
+}

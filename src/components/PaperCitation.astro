@@ -1,0 +1,17 @@
+---
+const { title, authors, publication, year, link } = Astro.props
+
+import externalIcon from "../static/external-link.svg"
+
+import { Icon } from "astro-icon";
+---
+<div class="my-4">
+    <h1 class="text-xl font-bold">
+        {title}
+    </h1>
+    <h3 class="text-base font-light">{authors}</h3>
+    <span class="text-base font-medium text-secondary">{publication}</span>
+    <div>
+        <a href={link}><Icon name="external-link" class="inline-block fill-primary pb-1" width={20}/></a>
+    </div>
+</div>

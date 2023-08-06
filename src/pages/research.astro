@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PaperCitation from "../components/PaperCitation.astro";
+
+import { articles } from "../../public/publications.json";
+---
+
+<BaseLayout title="Research" sideBarActiveItemID="research">
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Research Works 👨🏽‍🔬</div>
+    {
+      articles.reverse().map((article)=>
+        <PaperCitation
+        title={article.title}
+        authors={article.authors}
+        publication={article.publication}
+        year={article.year}
+        link={article.link}
+        />
+      )
+    }
+  </div>
+</BaseLayout>
