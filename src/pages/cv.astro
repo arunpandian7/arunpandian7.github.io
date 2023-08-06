@@ -25,7 +25,7 @@ import { Image } from "@astrojs/image/components";
   <div class="time-line-container grid mb-10">
     <div class="flex flex-col md:flex-row">
       <div class="md:basis-64 mb-3">
-        <Image src="./kpriet.jpg" aspectRatio="1:1" width={64} fit="fill" format="webp"/>
+        <Image src="./kpriet.jpg" width={200} aspectRatio={1} alt="KPRIET Logo"/>
       </div>
       <div class="flex flex-col">
         <h2 class="text-xl font-bold">Bachelor of Engineering</h2>
@@ -46,8 +46,8 @@ import { Image } from "@astrojs/image/components";
   </div>
 
   <div class="flex flex-col md:flex-row">
-    <div class="md:basis-64 mr-5 mb-3">
-      <Image src="./qpicloud-logo.png" aspectRatio="4.9:3" width={64} fit="fill" quality="80"/>
+    <div class="md:basis-26 mb-3 md:mb-0 md:mr-3">
+      <Image src="./qpicloud-logo.png" width={300} aspectRatio={420/300}  alt="QpiCloud Logo"/>
     </div>
     <div class="flex flex-col">
       <h2 class="text-xl font-bold">QpiCloud Technologies</h2>
@@ -57,19 +57,35 @@ import { Image } from "@astrojs/image/components";
           title="Technical Team Lead"
           subtitle="April 2023 to Present"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          <p>Worked closely with client stakeholders on business requirements, managed project escalations, and facilitated project handover.
+            Directly supported the CEO in product design and market research for an automated datacenter management suite.
+            Led a team of 5 engineers in refactoring from monolith to microservices, reducing technical debts by implementing TypeScript for 80% test coverage.
+            Proposed and implemented architectural changes for asynchronous communication and offloading background tasks.
+            Developed client-side data validation and global state management to minimize API callbacks.
+          </p>
         </TimeLineElement>
         <TimeLineElement
           title="ML Research Engineer"
           subtitle="June 2022 to March 2023"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        <ul class="list-disc ml-4">
+          <li>Developed a Boosting Tree based VM Rightsizing Recommendation Algorithm</li>
+          <li>Research and Development of VM Size Recommendation solution for Datacenter Optimisation</li>
+          <li>Optimised the system data flow for 60% faster response</li>
+          <li>Built DAGs with Airflow for model inference monitoring for Data Drift, Concept Drift and Online Learning loop</li>
+          <li>Taken technical training for onboarded interns and mentored them</li>
+        </ul>
         </TimeLineElement>
         <TimeLineElement
           title="Data Science Intern"
           subtitle="January 2021 to May 2022"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        <ul class="list-disc ml-4">
+          <li>Worked in research and development of Anomaly Detection Models for Network Intrusion threats like Malware, DDoS</li>
+          <li>Researched and developed a transformer based text mining solution for QpiAI Pro AutoML Platform</li>
+          <li>Refactored microservice API Server into FastAPI that results 80% improvement in speed and efficiency</li>
+          <li>Performed containerisation, CI/CD Deployment in AWS Cloud via GitLab</li>
+        </ul>
         </TimeLineElement>
       </div>
     </div>
