@@ -17,15 +17,30 @@ jobs:
     steps:
       - name: Checkout the main branch
         uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x.x
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
         with:
           version: 8
-      - name: Install, buld and deploy site
-        uses: withastro/action@v0
+      - name: Install
+        shell: "bash"
+        run: |
+          cd .
+          pnpm install
+      - name: Build
+        shell: "bash"
+        run: |
+          cd .
+          pnpm run build
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          node-version: 18
-          package-manager: pnpm
-          package-manager-version: 8
+          path: "./dist/"
 
   deploy:
     needs: build
