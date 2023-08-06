@@ -22,6 +22,10 @@ jobs:
           version: 8
       - name: Install, buld and deploy site
         uses: withastro/action@v0
+        with:
+          node-version: 18
+          package-manager: pnpm
+          package-manager-version: 8
 
   deploy:
     needs: build
