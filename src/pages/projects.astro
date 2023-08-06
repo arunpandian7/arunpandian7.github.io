@@ -5,27 +5,36 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Dev Projects</div>
+    <div class="text-3xl w-full font-bold mb-5">Dev Projects 👨🏽‍💻</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="Chest Radiography Diagnosis for COVID-19"
+    img="/covid-diagnosis.jpg"
+    desc="Deep CNN based models for classification of Chest X-Ray Radiography images and localisation of abnormal lung legions"
+    url="https://github.com/arunpandian7/skywatch-ai"
+    badge="Research"
+    tags="FastAPI,Fast R-CNN, PyTorch"
   />
-  <div class="divider my-0"></div>
+
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
+    title="SkywatchAI"
+    img="/skywatch-ai.jpeg"
+    desc="A full stack facial recognition and verification suite along with database integration deployed as API Server"
+    url="https://github.com/arunpandian7/skywatch-ai"
+    tags="MTCNN, FaceNet, FastAPI"
+  />
+
+  <HorizontalCard
+    title="Sentiment Analyser"
+    img="/sentiment-analysis.png"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    tags="Python,Tensorflow"
+    url="https://github.com/arunpandian7/Sentiment-Analysis"
+    tags="Tensorflow,React.js,LSTM"
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Research Works</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Research Works 👨🏽‍🔬</div>
   </div>
 
   <HorizontalCard
@@ -35,14 +44,12 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     url="#"
     badge="FOSS"
   />
-  <div class="divider my-0"></div>
   <HorizontalCard
     title="Demo Project 4"
     img="/post_img.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     url="#"
   />
-  <div class="divider my-0"></div>
   <HorizontalCard
     title="Demo Project 5"
     img="/post_img.webp"
