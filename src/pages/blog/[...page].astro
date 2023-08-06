@@ -12,6 +12,7 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 ---
 
+
 <BaseLayout title="Blog" sideBarActiveItemID="blog">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Blog</div>
@@ -35,7 +36,6 @@ const { page } = Astro.props;
               target="_self"
               badge={post.data.badge}
             />
-            <div class="divider my-0" />
           </>
         ))}
       </ul>
@@ -83,3 +83,4 @@ const { page } = Astro.props;
     }
   </div>
 </BaseLayout>
+
