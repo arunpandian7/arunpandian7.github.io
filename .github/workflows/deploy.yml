@@ -17,6 +17,9 @@ jobs:
     steps:
       - name: Checkout the main branch
         uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Install, buld and deploy site
         uses: withastro/action@v0
 
