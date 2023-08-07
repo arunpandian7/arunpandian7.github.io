@@ -3,9 +3,13 @@ import type { FunctionalComponent } from "preact";
 
 export default function ThemeToggle(): FunctionalComponent {
     const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
+
     
     const toggle = () => {
+        const lightSound = new Audio("/sound/R2-D2.mp3");
+        const darkSound = new Audio("/sound/Darth-Vader.mp3");
         setTheme(theme === "light" ? "dark" : "light");
+        theme==="light" ? darkSound.play() : lightSound.play();
     };
     const handleClick = () => {
         toggle()
