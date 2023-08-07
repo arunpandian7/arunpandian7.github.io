@@ -5,12 +5,33 @@ import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import ThemeToggle from "../components/ThemeToggle";
 
 const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSidebar = true, sideBarActiveItemID } = Astro.props;
 ---
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+    document.querySelector("html")?.setAttribute("data-theme", "emerald");
+  } else {
+    document.documentElement.classList.add("dark");
+    document.querySelector("html")?.setAttribute("data-theme", "dracula");
+  }
+  window.localStorage.setItem("theme", theme);
+</script>
 
 <!DOCTYPE html>
-<html lang="en" data-theme="emerald">
+<html lang="en">
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
@@ -19,6 +40,9 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content bg-base-100">
         <Header title={SITE_TITLE} />
+        <nav class="sticky top-4 mr-4 hidden place-items-end lg:grid">
+          <ThemeToggle client:load/>
+        </nav>
         <div class="md:flex md:justify-center min-h-[90%]">
           <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
             <slot />
