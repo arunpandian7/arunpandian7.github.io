@@ -41,7 +41,32 @@ import { Picture } from "@astrojs/image/components";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
-
+  <div class="flex flex-col md:flex-row mb-10">
+    <div class="max-w-[30%] md:max-w-[10%] mb-3 md:mb-0 md:mr-5 mt-2">
+      <Picture src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Siemens_AG_logo.svg" widths={[200]} aspectRatio={420/300}  alt="Siemens Logo" fit="inside"/>
+    </div>
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold">Siemens Advanta</h2>
+      <span class="text-light text-lm text-gray-500 mb-3">Bangalore, Karnataka, India</span>
+      <div class="time-line-container">
+        <TimeLineElement
+          title="Senior Data Engineer"
+          subtitle="September 2023 to Present"
+        >
+          <ul class="list-disc ml-4">
+            <li>
+              Design and development of cloud-native data pipelines for processing big data
+            </li>
+            <li>
+              Optimizing workflows for extracting large scale data with highly scalable and elastic architecture
+            </li>
+            
+          </ul> 
+        </TimeLineElement>
+      </div>
+    </div>
+    
+  </div>
   <div class="flex flex-col md:flex-row mb-10">
     <div class="max-w-[30%] md:max-w-[10%] mb-3 md:mb-0 md:mr-5">
       <Picture src="/qpicloud-logo.png" widths={[200]} aspectRatio={420/300}  alt="QpiCloud Logo" fit="inside"/>
@@ -52,7 +77,7 @@ import { Picture } from "@astrojs/image/components";
       <div class="time-line-container">
         <TimeLineElement
           title="Technical Team Lead"
-          subtitle="April 2023 to Present"
+          subtitle="April 2023 to September 2023"
         >
           <p>Worked closely with client stakeholders on business requirements, managed project escalations, and facilitated project handover.
             Directly supported the CEO in product design and market research for an automated datacenter management suite.
