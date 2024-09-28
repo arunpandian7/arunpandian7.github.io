@@ -9,7 +9,7 @@ import { Image } from "@astrojs/image/components";
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
-        img && (
+        img ? (
           <Image
             src={img}
             aspectRatio="16:9"
@@ -17,8 +17,16 @@ import { Image } from "@astrojs/image/components";
             format="webp"
             alt={title}
             class="max-w-full md:max-w-[13rem] rounded-lg"
-          />
-        )
+          />) : (
+            <Image
+              src="/post_img.webp"
+              aspectRatio="16:9"
+              width={750}
+              format="webp"
+              alt={title}
+              class="max-w-full md:max-w-[13rem] rounded-lg"
+            />
+          )
       }
       <div class="grow w-full">
         <h1 class="text-xl font-bold">
