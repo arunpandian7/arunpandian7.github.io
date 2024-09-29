@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 
 ---
 
@@ -21,10 +21,10 @@ import { Picture } from "@astrojs/image/components";
 
   <div class="time-line-container grid mb-10">
     <div class="flex flex-col md:flex-row">
-      <div class="max-w-[30%] md:max-w-[10%] mb-3 md:mb-0 md:mr-5">
-        <Picture src="/kpriet.png" widths={[200]} aspectRatio={1} alt="KPRIET Logo" fit="fill"/>
+      <div class="w-1/5 md:max-w-[10%] mb-3 md:mb-0 md:mr-5">
+        <Picture src="/kpriet.png" width={200} height={100} alt="KPRIET Logo" />
       </div>
-      <div class="flex flex-col">
+      <div class="w-4/5 flex flex-col">
         <h2 class="text-xl font-bold">Bachelor of Engineering</h2>
         <span class="text-m font-medium">KPR Institute of Engineering and Technology, Coimbatore, India</span>
         <span class="text-sm">2018-2022</span>
@@ -42,10 +42,10 @@ import { Picture } from "@astrojs/image/components";
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
   <div class="flex flex-col md:flex-row mb-10">
-    <div class="max-w-[30%] md:max-w-[10%] mb-3 md:mb-0 md:mr-5 mt-2">
-      <Picture src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Siemens_AG_logo.svg" widths={[200]} aspectRatio={420/300}  alt="Siemens Logo" fit="inside"/>
+    <div class="w-1/5 md:w-[10%] mb-3 md:mb-0 md:mr-5 mt-2">
+      <Picture src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Siemens_AG_logo.svg" width={200} height={100}  alt="Siemens Logo" />
     </div>
-    <div class="flex flex-col">
+    <div class="w-4/5 flex flex-col">
       <h2 class="text-xl font-bold">Siemens Advanta</h2>
       <span class="text-light text-lm text-gray-500 mb-3">Bangalore, Karnataka, India</span>
       <div class="time-line-container">
@@ -68,10 +68,10 @@ import { Picture } from "@astrojs/image/components";
     
   </div>
   <div class="flex flex-col md:flex-row mb-10">
-    <div class="max-w-[30%] md:max-w-[10%] mb-3 md:mb-0 md:mr-5">
-      <Picture src="/qpicloud-logo.png" widths={[200]} aspectRatio={420/300}  alt="QpiCloud Logo" fit="inside"/>
+    <div class="w-1/5 md:w-[10%] mb-3 md:mb-0 md:mr-5">
+      <Picture src="/qpicloud-logo.png" width={200} height={170} alt="QpiCloud Logo" />
     </div>
-    <div class="flex flex-col">
+    <div class="w-4/5 w-flex flex-col">
       <h2 class="text-xl font-bold">QpiCloud Technologies</h2>
       <span class="text-light text-lm text-gray-500 mb-3">Bangalore, Karnataka, India</span>
       <div class="time-line-container">
