@@ -1,11 +1,10 @@
 ---
-title: "Gaming and Workstation in One: Dual Boot"
-description: "Guide to configure Dual Boot Windows and Ubuntu in a single workbook."
-pubDate: "Dec 26 2020"
-heroImage: "/gaming-setup-blog.webp"
+title: 'Gaming and Workstation in One: Dual Boot'
+description: Guide to configure Dual Boot Windows and Ubuntu in a single workbook.
+pubDate: Dec 26 2020
+heroImage: /gaming-setup-blog.webp
 prev: dummy-copy
 ---
-
 As a gamer, we are obliged to use Windows. But as a developer, we often find ourselves limited by the tools available for windows and annoyed by some unstable environment especially if you develop ML application. I often frustrated getting an deployment bugs due to environment differences between local and cloud platform. I am sure you can find a lot of reasons for why you should use Linux for some development process.
 
 I tried WSL2 running Ubuntu 20.04 LTS for a brief time of 2 weeks. I’m not gonna lie, WSL2 is great and I would give Microsoft for making it seamless. But there are still few things which require attention and some bugs are still under review for a long time now. Yeah obviously you are going to get a lot of troubles when dealing with the tool and framework which are already troublesome maintenance. I use GPU to train my Machine Learning models but the support for CUDA in windows is still in its early stages. Overall, WSL has got a long way to go before becoming an ultimate environment for Development. I am sure Microsoft may achieve it one day.
@@ -36,7 +35,7 @@ After downloading ISO file, use [Etcher.io](https://etcher.io/) to create a boot
 
 Now that you got Pop OS on a bootable drive. You can now reboot your machine and press the respective key to open Boot Menu at the startup. You can find your machine’s Boot Menu Key with a simple Google Search. Now select the USB Drive from boot menu. You will be greeted with Pop OS Greeter, choose “Try or Install Pop OS” and press Enter. Now you will run a live version of Pop OS.
 
-![Pop OS USB Live](https://cdn-images-1.medium.com/max/2720/0*AnSC1viNsTaxPtzF.png)*Pop OS USB Live*
+![Pop OS USB Live](https://cdn-images-1.medium.com/max/2720/0*AnSC1viNsTaxPtzF.png)_Pop OS USB Live_
 
 Get through the setup process by selecting your region, language and keyboard layout. Then you will be prompted to choose an installation medium, where and how would you like to install Pop OS. For this choose **Custom(Advanced)** to perform Dual Boot settings and not messing up Windows Partitions.
 
@@ -78,15 +77,15 @@ Because there will be bad install of grub by the kernel. We will have to manuall
 
 Now the GRUB file have nothing in it and we have to set it up from GRUB-Customizer. Open Grub Customizer App from the applications.
 
-* Click on Change Environment
+- Click on Change Environment
 
-* In the Environment Setup Screen, set OUTPUT_FILE value to /boot/efi/EFI/pop/grub.cfg
+- In the Environment Setup Screen, set OUTPUT_FILE value to /boot/efi/EFI/pop/grub.cfg
 
-* Save the configuration using **Save**
+- Save the configuration using **Save**
 
-* Click **Apply**
+- Click **Apply**
 
-* Reboot your system to GRUB Bootloader giving you choice between Pop OS and Windows
+- Reboot your system to GRUB Bootloader giving you choice between Pop OS and Windows
 
 Now you can easily switch between Pop OS and Windows.
 
@@ -94,26 +93,28 @@ Now you can easily switch between Pop OS and Windows.
 
 Although you can mount and explore the files in Windows Partition Drives with **Files**application in Pop OS. You have to mount every time you boot Pop OS. You can automate this process by configuring in **fstab** configuration file.
 
-* Open *Disks* from applications and activities
+- Open _Disks_ from applications and activities
 
-* Find your **Dev Home**partition that you created back in windows with NTFS format
+- Find your **Dev Home**partition that you created back in windows with NTFS format
 
-![Disks Application](https://cdn-images-1.medium.com/max/2000/1*6gD73xWDrMRuBHS3UTVahA.png)*Disks Application*
+![Disks Application](https://cdn-images-1.medium.com/max/2000/1*6gD73xWDrMRuBHS3UTVahA.png)_Disks Application_
 
-* After selecting your partition, you can see some info down there where you can find **UUID.**Copy that in your clipboard
+- After selecting your partition, you can see some info down there where you can find **UUID.**Copy that in your clipboard
 
-* Open fstab file in an text editor with root access
+- Open fstab file in an text editor with root access
 
 ```bash
    sudo nano /etc/fstab`
 ```
 
-* Add the following new line after the end of the file in this specified format.
+- Add the following new line after the end of the file in this specified format.
 
 ```
     UUID=<UUID of the partition> /media/<name> ntfs-3g auto,user,rw 0 0
 ```
-![fstab Configuration File](https://cdn-images-1.medium.com/max/2010/1*oUvpf_jlzIv7tCGNLhG9IA.png)*fstab Configuration File*
+
+![fstab Configuration File](https://cdn-images-1.medium.com/max/2010/1*oUvpf_jlzIv7tCGNLhG9IA.png)_fstab Configuration File_
+
 > Note : You have to use Tab to separate them out instead of space.
 
     cd /media/home
@@ -131,3 +132,4 @@ Both Windows and Linux are blissful for developers at times you will need both s
 2. [Pop OS 20.04 LTS Installation Guide](https://linoxide.com/distros/install-pop-os-20-04/)
 
 3. [Install GRUB on Pop OS](https://jacci.net/linux/pop-os/how-to-install-grub-on-pop-os-20-04/)
+
